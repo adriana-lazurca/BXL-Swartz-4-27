@@ -10,9 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    // to get the value of an input: document.getElementById("element-id").value
+  // to get the value of an input: document.getElementById("element-id").value
 
-    document.getElementById("run").addEventListener("click", () => {
-        // your code here
+  document.getElementById("run").addEventListener("click", () => {
+    // your code here
+    var numbers = document.getElementById("numbers").value;
+    var stringArray = numbers.split(", "); //returns array of strings
+    var numArray = stringArray.map((element) => parseInt(element)); //returns array of nrs.
+    var sorted = numArray.sort(function (a, b) {
+      return a - b;
     });
+    var inputEl = document.getElementById("ordered");
+    inputEl.value = sorted.join(", ");
+  });
 })();
