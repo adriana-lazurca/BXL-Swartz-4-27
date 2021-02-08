@@ -11,4 +11,6 @@
 
 (() => {
     // your code here
+    var text = "Hello, World!";
+    alert(text);
 })();

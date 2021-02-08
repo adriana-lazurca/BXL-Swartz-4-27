@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+
+  var response = prompt("Tu veux du gâteau?");
+  var messageEl = document.getElementById("myh2");
+
+  if (response == "oui") {
+    messageEl.innerHTML = "Très Bien";
+  } else {
+    messageEl.innerHTML = "du gâteau, ça ne se refuse pas !";
+  }
 })();

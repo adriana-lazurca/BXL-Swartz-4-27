@@ -10,5 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+
+  do {
+    var age = prompt("What is your age?");
+    var gen = prompt("What is your gender?");
+    var city = prompt("What city do you live in?");
+    var confirmation = confirm(
+      "Age: " + age +" Sex: " + gen +" City: " + city + "\n" + "Do you confirm this information?"
+    );
+  } while (confirmation == false);
+
+  alert("Thanks for answering!");
+
 })();
