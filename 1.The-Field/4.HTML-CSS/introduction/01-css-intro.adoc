@@ -1,0 +1,40 @@
+= Markdown to HTML and CSS
+
+Type of challenge: *learning* +
+Duration: *60 min* +
+Team challenge: *solo*
+
+
+== Learning objectives
+
+At the end of this challenge you should be able to:
+
+* use basic *CSS* rules
+* stylize a *HTML* page with some *CSS*
+
+
+== The mission
+
+This exercise takes place in the _markdown-warmup-html_ repository. Following
+the last exercise, you have to add some *CSS* swag to your page within a file
+called _style.css_.
+
+.Instructions
+* go back to _markdown-warmup-html_
+* create _style.css_
+* style the page with some *CSS*
+* commit/push
+
+
+== Resources
+
+* https://color.adobe.com/[color palette]
+* https://developer.mozilla.org/en-US/docs/Web/CSS[CSS documentation]
+
+
+== Congrats
+
+As useful as *HTML* is, it can produce dull and repetitive pages, but with the
+addition of *CSS* you can create unique unicorns.
+
+image::https://media.giphy.com/media/l1K9EYgSVXfzviMkE/giphy.gif[]

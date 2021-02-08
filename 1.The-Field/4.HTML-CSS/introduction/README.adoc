@@ -1,0 +1,25 @@
+= HTML part one
+
+In this part of the *HTML* and *CSS* course you will acquaint yourself with the
+basics of both languages. You won't be expert by the end of the last challenge
+below, but already able to make static website.
+
+NOTE: Don't forget to indent your code, clean code is key to a peaceful mind.
+
+
+== Challenges
+
+* link:./00-markdown-to-html.adoc[00 - Markdown to HTML]
+* link:./01-css-intro.adoc[01 - CSS introduction]
+* link:./02-publish-page.adoc[02 - publish a page]
+* link:./03-error-404.adoc[03 - page 404]
+* link:./04-curriculum-vitae.adoc[04 - curriculum vitae]
+* link:./05-vcard.adoc[05 - vcard]
+* link:./06-star-wars.adoc[06 - Star Wars]
+
+*Challenge 22/01/21*
+
+* link:./07-tim-berners-lee.adoc[07 - Tim Berners-Lee]
+
+
+image::https://media.giphy.com/media/UKWxGMEPjRwCA/giphy.gif[]
