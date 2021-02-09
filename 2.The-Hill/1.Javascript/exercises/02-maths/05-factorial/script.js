@@ -10,9 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // to get the value of an input: document.getElementById("element-id").value
+  // to get the value of an input: document.getElementById("element-id").value
 
-    document.getElementById("run").addEventListener("click", () => {
-        // your code here
-    });
+  document.getElementById("run").addEventListener("click", () => {
+    // your code here
+    var nombre = document.getElementById("number").value;
+    let produs = 1;
+    for (i = 1; i <= nombre; i++) {
+      produs = produs * i;
+    }
+    var inputNum = document.getElementById("number");
+    inputNum.value = produs;
+  });
 })();
