@@ -9,6 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+function changeBgColor(color) {
+  document.body.style.backgroundColor = color;
+}
+
+function getRandomColor() {
+  var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  return randomColor;
+}
+
 (() => {
-    // your code here
+  // your code here
+
+  document.getElementById("run").addEventListener("click", () => {
+    let randomColor = getRandomColor();
+    changeBgColor(randomColor);
+  });
 })();

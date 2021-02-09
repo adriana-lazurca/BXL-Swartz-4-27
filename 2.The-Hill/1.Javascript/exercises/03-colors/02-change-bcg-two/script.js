@@ -9,6 +9,13 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+function changeBgColor(inputColor) {
+  document.body.style.backgroundColor = inputColor;
+}
 (() => {
-    // your code here
+  // your code here
+  document.getElementById("run").addEventListener("click", () => {
+    var inputColor = document.getElementById("color").value;
+    changeBgColor(inputColor);
+  });
 })();
