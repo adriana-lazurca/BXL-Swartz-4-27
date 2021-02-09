@@ -10,6 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-    // your code here
+  // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+  // your code here
+
+  var currentDate = new Date();
+  var eveningDate = new Date();
+  eveningDate.setHours(17, 30, 0);
+  var isDayTime = currentDate.getTime() < eveningDate.getTime();
+  var element = document.getElementById("target");
+  element.innerHTML = isDayTime ? "Bonjour" : "Bonsoir";
+
 })();
