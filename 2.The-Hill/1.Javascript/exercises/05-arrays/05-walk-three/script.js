@@ -14,7 +14,7 @@
         {
             firstname: "Garald",
             lastname: "Freschi",
-            email: "gfreschi0@discuz.net",
+            email: "gfreschi0@discuz.net"
         },
         {
             firstname: "Bendicty",
@@ -39,4 +39,13 @@
     ];
 
     // your code here
+
+    document.getElementById("run").addEventListener("click", () => {
+        people.forEach(displayName);
+    
+        function displayName(person) {
+          console.log(person.firstname + " " + person.lastname);
+        }
+      });
+
 })();
