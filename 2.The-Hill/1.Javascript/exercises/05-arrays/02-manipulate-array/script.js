@@ -10,18 +10,26 @@
 // You will have time to focus on it later.
 
 (() => {
-    const fruits = [
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
-        "orange",
-        "mandarine",
-        "durian",
-        "pêche",
-        "raisin",
-        "cerise",
-    ];
+  const fruits = [
+    "pomme",
+    "poire",
+    "fraise",
+    "tomate",
+    "orange",
+    "mandarine",
+    "durian",
+    "pêche",
+    "raisin",
+    "cerise",
+  ];
 
-    // your code here
+  // your code here
+
+  document.getElementById("run").addEventListener("click", () => {
+    fruits.pop();
+    fruits.shift();
+    fruits.unshift("banane");
+    fruits.push("kiwi");
+    console.log(fruits);
+  });
 })();

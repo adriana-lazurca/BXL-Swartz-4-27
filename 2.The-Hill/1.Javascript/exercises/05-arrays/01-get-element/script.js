@@ -26,4 +26,10 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+      var display = document.getElementById("fruit");
+      display.innerHTML = fruits[3];
+
+       
+      });
 })();
