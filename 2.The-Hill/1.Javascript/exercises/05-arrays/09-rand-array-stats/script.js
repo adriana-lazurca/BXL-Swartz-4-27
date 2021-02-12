@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+
+  // function generateNr(id) {
+  //   var randomNum = Math.floor(Math.random() * 101) + 1;
+  //   var tdElement = document.getElementById(id);
+  //   tdElement.innerHTML = randomNum;
+  // }
+  // generateNr("n-7");
+  // generateNr("n-5");
+
+  // do {
+  //   let wrongAnswer = response > 3 || response < 1;
+  //   var response = prompt("Please write a number between 1-3");
+  // } while (wrongAnswer);
 })();
+
