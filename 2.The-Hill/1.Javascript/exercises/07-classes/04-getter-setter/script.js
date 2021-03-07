@@ -11,4 +11,40 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+        class Person {
+            constructor(firstname, lastname) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+            }
+
+            // getFirstName() {
+            //     return this.firstname;
+            // }
+
+            // changeFirstName(value) { 
+            //     this.firstname = value;
+            // }
+
+            // getFullName() {
+            //     return this.firstname + this.lastname;
+            // }
+
+            get name() {
+                return this.firstname + " " + this.lastname;
+            }
+
+            set name(value) {
+                var fullName = value.split(" ");
+                this.firstname = fullName[0];
+                this.lastname = fullName[1];
+            }
+        }
+
+        var student = new Person("Alex", "Lopez");
+        console.log(student.name);
+        student.name = "Sasha Rodriguez";
+        console.log(student.name);
+    });
 })();

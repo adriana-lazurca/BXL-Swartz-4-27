@@ -11,4 +11,19 @@
 
 (() => {
     // your code here
+    var element = document.getElementById("source");
+    var attributValue = element.getAttribute("data-image");
+
+    var imgElement = document.getElementById("target");
+    var imgTag = document.createElement("img");
+    imgTag.src = attributValue;
+    imgElement.appendChild(imgTag);
+
+    element.remove();
+
+    // var image = document.getElementsByTagName("img")[0];
+    // var attribute = document.createAttribute("src");
+    // attribute.value = attributValue;
+    // image.setAttributeNode(attribute);
+
 })();

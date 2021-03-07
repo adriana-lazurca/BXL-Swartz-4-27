@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    var imgElement = document.getElementsByTagName("IMG")[0];
+    var imgMouseOut = imgElement.src;
+    var imgDataHover = imgElement.getAttribute("data-hover");
+    imgElement.addEventListener("mouseover", () => {
+        imgElement.src = imgDataHover;
+    });
+
+    imgElement.addEventListener("mouseout", () => {
+        imgElement.src = imgMouseOut;
+    });
 })();
