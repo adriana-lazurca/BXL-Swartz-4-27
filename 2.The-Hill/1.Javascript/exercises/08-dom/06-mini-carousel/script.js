@@ -19,4 +19,20 @@
     ];
 
     // your code here
+    var standardImg = document.getElementsByTagName("IMG")[0];
+
+    var nextPosition = 1;
+    
+
+    document.getElementById("next").addEventListener("click", () => {
+        
+        if (nextPosition >= gallery.length) {
+            nextPosition = 0;
+        }
+
+        standardImg.src = gallery[nextPosition];
+
+        nextPosition++;
+    });
+
 })();
