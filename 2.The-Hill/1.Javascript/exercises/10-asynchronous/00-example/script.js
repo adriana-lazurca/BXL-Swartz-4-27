@@ -10,14 +10,17 @@
     const setupIntervalMessage = (label, delay) => {
         let count = 0;
 
-        return setInterval(() => console.log(`${label}:`, ++count), delay);
+        return setInterval(() => {
+            console.log(`${label}:`, ++count);
+        }, delay);
     };
 
     let intervals = [];
+    // truthy false
 
     document.getElementById("run").addEventListener("click", () => {
         if (intervals.length) {
-            intervals = intervals.filter(clearInterval);
+            intervals = intervals.filter(interval => clearInterval(interval));
             console.clear();
         }
 
