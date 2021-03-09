@@ -11,4 +11,52 @@
 
 (() => {
     // your code here
+    var targetElement = document.getElementById("target");
+
+    document.getElementById("run").addEventListener("click", displayHeroes);
+
+    function displayHeroes() {
+        fetch("http://localhost:3000/heroes")
+            .then(result => {
+                return result.json();
+            })
+            .then(list => {
+
+                for (var i = 0; i < list.length; i++) {
+                    // Create the list item:
+                    var item = document.createElement('li');
+
+                    // Set its contents:
+                    var nameText = JSON.stringify(list[i]);
+                    var textItem = document.createTextNode(nameText);
+                    item.appendChild(textItem);
+
+                    // Add it to the list:
+                    targetElement.appendChild(item);
+                }
+
+                function displayHero(index) {
+                    var template = document.querySelector('#tpl-hero');
+                    var clone = document.importNode(template.content, true);
+                    document.body.appendChild(clone);
+
+                    var hero = list[index];
+
+                    var nameElements = document.getElementsByClassName("name");
+                    nameElements[index].innerText = hero.name;
+
+                    var alterEgoElements = document.getElementsByClassName("alter-ego");
+                    alterEgoElements[index].innerText = hero.alterEgo;
+
+                    var powerElements = document.getElementsByClassName("powers");
+                    powerElements[index].innerText = hero.abilities;
+                }
+
+                for (let i = 0; i < list.length; i++) {
+                    displayHero(i);
+                }
+
+            })
+    }
+
 })();
