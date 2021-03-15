@@ -15,20 +15,26 @@
 
     document.getElementById("run").addEventListener("click", getHero);
 
-    function displayHero() {
-        var template = document.querySelector('#tpl-hero');
-        var clone = document.importNode(template.content, true);
-        document.body.appendChild(clone);
-        
-        var hero = list[index];
+    function displayHero(hero) {
+        // create copy of template
+        var heroTemplate = document.querySelector('#tpl-hero');
+        var heroElement = document.importNode(heroTemplate.content, true);
+
+        if (targetElement.children.length == 0) {
+            targetElement.appendChild(heroElement);
+        }
+        else {
+            targetElement.children[0] = heroElement;
+        }
+
         var nameElements = document.getElementsByClassName("name");
-        nameElements[index].innerText = hero.name;
+        nameElements[0].innerText = hero.name;
 
         var alterEgoElements = document.getElementsByClassName("alter-ego");
-        alterEgoElements[index].innerText = hero.alterEgo;
+        alterEgoElements[0].innerText = hero.alterEgo;
 
         var powerElements = document.getElementsByClassName("powers");
-        powerElements[index].innerText = hero.abilities;
+        powerElements[0].innerText = hero.abilities;
     }
 
     function getHero() {
@@ -37,6 +43,7 @@
                 return result.json();
             })
             .then(list => {
+                // read input value
                 var inputElement = document.getElementById("hero-id");
                 var inputValue = parseInt(inputElement.value);
 
@@ -46,11 +53,10 @@
                 var hero = list.find(checkId);
 
                 if (hero == undefined) {
-                    //console.log("This hero doesn't exist");
-                    targetElement.innerText = "This hero doesn't exist";
+                    alert("This hero doesn't exist");
                 }
                 else {
-                    displayHero();
+                    displayHero(hero);
                 }
             })
 
